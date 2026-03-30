@@ -403,19 +403,25 @@ export default function MapQuiz() {
               >
                 {score}
               </motion.span>
-              <div className="mt-4 flex items-center gap-2 text-gold/80 text-sm font-bold uppercase">
-                <MapPin size={14} />
-                <span>{gameMode} MAP MASTER</span>
-              </div>
+              {/* Map Master text removed as per user request */}
             </div>
 
-            <button
-              onClick={() => setScreen('SELECTION')}
-              className="flex items-center gap-3 rounded bg-valorant-grey border border-valorant-light/10 px-10 py-4 text-lg font-bold text-valorant-light hover:bg-valorant-light/5 transition-colors active:scale-95"
-            >
-              <RefreshCw size={20} />
-              BAŞKA OYUN SEÇ
-            </button>
+            <div className="flex flex-col gap-4 items-center">
+              <button
+                onClick={() => setScreen('SELECTION')}
+                className="flex items-center gap-3 rounded bg-valorant-grey border border-valorant-light/10 px-10 py-4 text-lg font-bold text-valorant-light hover:bg-valorant-light/5 transition-colors active:scale-95"
+              >
+                <RefreshCw size={20} />
+                BAŞKA OYUN SEÇ
+              </button>
+              
+              <button
+                onClick={() => setScreen('START')}
+                className="text-valorant-light/40 hover:text-valorant-light transition-colors font-bold text-sm uppercase tracking-widest p-2"
+              >
+                ANA MENÜYE DÖN
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
