@@ -213,27 +213,34 @@ export default function MapQuiz() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="z-10 flex w-full max-w-md flex-col items-center gap-8"
+            className="z-10 flex w-full max-w-lg flex-col items-center gap-8 px-4"
           >
             <div className="text-center">
-              <h1 className="text-6xl font-black tracking-tighter text-valorant-light drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+              <img 
+                src="/esapp_logo.png" 
+                alt="Logo" 
+                className="w-28 sm:w-40 h-auto mx-auto mb-10 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]" 
+              />
+              <h1 className="text-6xl sm:text-7xl font-black tracking-tighter text-white uppercase drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] leading-[1]">
                 MAPMASTERY
               </h1>
             </div>
 
-            <div className="glass w-full rounded-2xl p-6 text-center space-y-2">
-              <p className="text-valorant-light/80 font-semibold text-xs uppercase tracking-wider">
-                Sahaya İniş Öncesi Son Kontrol: Konum Bilgisi Analizi
+            <div className="w-full rounded-[2rem] p-6 sm:p-8 text-center space-y-2 bg-white/[0.05] border border-white/20 backdrop-blur-[25px] shadow-2xl overflow-hidden">
+              <p className="text-white/80 font-medium text-[9px] sm:text-[11px] uppercase tracking-[0.2em] drop-shadow-sm whitespace-nowrap">
+                Sahaya İniş Öncesi Son Kontrol: Konum Analizi
               </p>
-              <p className="text-valorant-light/80 font-semibold">10 Soru • Maksimum Odak</p>
+              <p className="text-white text-base sm:text-xl font-black tracking-wide whitespace-nowrap drop-shadow-md">
+                10 Soru • Maksimum Odak
+              </p>
             </div>
 
             <button
               onClick={startSelection}
-              className="group relative w-full overflow-hidden rounded bg-valorant-red px-12 py-4 text-xl font-black tracking-widest text-white shadow-[0_0_20px_rgba(255,70,85,0.4)] transition-all hover:scale-105 active:scale-95"
+              className="group relative w-full overflow-hidden rounded-xl bg-[#198754] px-12 py-4 sm:py-5 text-xl sm:text-2xl font-black tracking-[0.2em] text-white shadow-[0_0_30px_rgba(25,135,84,0.6),0_0_60px_rgba(25,135,84,0.3)] transition-all hover:scale-[1.02] active:scale-95 border border-emerald-400/20"
             >
               <span className="relative z-10">BAŞLA</span>
-              <div className="absolute inset-0 -translate-x-full bg-white/20 transition-transform group-hover:translate-x-0" />
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
           </motion.div>
         )}
